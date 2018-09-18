@@ -507,9 +507,7 @@ def parse_value_literal(parser, is_const):
             )
 
         if token.value == "null":
-            return ast.NullValue(
-                loc=loc(parser, token.start)  # type: ignore
-            )
+            return ast.NullValue(loc=loc(parser, token.start))  # type: ignore
 
         return ast.EnumValue(  # type: ignore
             value=token.value, loc=loc(parser, token.start)

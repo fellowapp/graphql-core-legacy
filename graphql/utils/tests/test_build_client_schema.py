@@ -77,8 +77,10 @@ def test_builds_a_simple_schema_with_both_operation_types():
             "setStringDefault": GraphQLField(
                 GraphQLString,
                 description="Set the string field",
-                args={"default_value": GraphQLArgument(GraphQLString, default_value=None)},
-            )
+                args={
+                    "default_value": GraphQLArgument(GraphQLString, default_value=None)
+                },
+            ),
         },
     )
     SubscriptionType = GraphQLObjectType(
@@ -469,7 +471,9 @@ def test_builds_a_schema_with_field_arguments_with_default_values():
                         GraphQLField(
                             GraphQLString,
                             args={
-                                "intArg": GraphQLArgument(GraphQLInt, default_value=None)
+                                "intArg": GraphQLArgument(
+                                    GraphQLInt, default_value=None
+                                )
                             },
                         ),
                     ),

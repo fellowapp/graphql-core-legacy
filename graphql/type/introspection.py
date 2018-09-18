@@ -541,10 +541,7 @@ __InputValue = GraphQLObjectType(
             ("type", GraphQLField(GraphQLNonNull(__Type))),
             (
                 "defaultValue",
-                GraphQLField(
-                    type_=GraphQLString,
-                    resolver=_resolve_default_value,
-                ),
+                GraphQLField(type_=GraphQLString, resolver=_resolve_default_value),
             ),
         ]
     ),
