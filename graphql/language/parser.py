@@ -718,7 +718,7 @@ def parse_implements_interfaces(parser):
         while True:
             types.append(parse_named_type(parser))
 
-            if not peek(parser, TokenKind.NAME):
+            if not skip(parser, TokenKind.AMP):
                 break
 
     return types

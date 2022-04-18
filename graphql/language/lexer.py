@@ -76,6 +76,7 @@ class TokenKind(object):
     INT = 17
     FLOAT = 18
     STRING = 19
+    AMP = 20
 
 
 def get_token_desc(token):
@@ -111,6 +112,7 @@ TOKEN_DESCRIPTION = {
     TokenKind.INT: "Int",
     TokenKind.FLOAT: "Float",
     TokenKind.STRING: "String",
+    TokenKind.AMP: "&",
 }
 
 
@@ -135,6 +137,7 @@ PUNCT_CODE_TO_KIND = {
     ord("{"): TokenKind.BRACE_L,
     ord("|"): TokenKind.PIPE,
     ord("}"): TokenKind.BRACE_R,
+    ord("&"): TokenKind.AMP,
 }
 
 
