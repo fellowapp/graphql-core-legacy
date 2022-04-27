@@ -187,7 +187,7 @@ type Root {
 def test_prints_string_field_with_int_arg_with_default_null():
     output = print_single_field_schema(
         GraphQLField(
-            type=GraphQLString,
+            type_=GraphQLString,
             args={"argOne": GraphQLArgument(GraphQLInt, default_value=None)},
         )
     )
